@@ -6,7 +6,6 @@ StackOverflow-lite is a platform where people can ask questions and provide answ
 
 | Endpoint       | Description          |   HTTP-verb  |
 | ------------- |:-------------:| -----:| 
-| /api/v1/register | Register new user | POST |
 | /api/v1/login  | Login the user using this endpoint      | POST   |
 | /api/v1/logout | Logout the user from the system      | POST   |
 | /api/v1/users | Get all users |  GET |
