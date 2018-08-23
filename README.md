@@ -6,6 +6,7 @@ StackOverflow-lite is a platform where people can ask questions and provide answ
 
 | Endpoint       | Description          |   HTTP-verb  |
 | ------------- |:-------------:| -----:| 
+
 | /api/v1/login  | Login the user using this endpoint      | POST   |
 | /api/v1/logout | Logout the user from the system      | POST   |
 | /api/v1/users | Get all users |  GET |
@@ -28,7 +29,7 @@ cd path/to/directory-your-directory
 - cd to StackOverflow-lite and execute the following commands:
     
     - $ virtualenv venv --python=python3
-    - $ source venv/bin/activate
+    - $ source venv/scripts/activate
     - $ pip install -r requirements.txt
     - $ pip install pytest
     
