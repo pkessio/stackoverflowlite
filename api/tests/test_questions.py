@@ -1,13 +1,15 @@
-import unittest
+import unittest import TestCase
 import os
 import json
-import models.questions import question
+from app.models import Questions
+from app import app
+
 
 
 class ApiTestCase(unittest.TestCase):  
        def setUp(self):
         """  Initialize app."""
-        self.app = create_app(config_name="test")
+        #self.app = create_app(config_name="test")
         self.client = self.app.test_client()
         self.question = {"title": "No module found error",
                          "content": "What is the correct way to fix this ImportError error?"
@@ -33,9 +35,9 @@ class ApiTestCase(unittest.TestCase):
             data=json.dumps(dict(title="challenge 2",
             content="Most challenging")),
             content_type="application/json")
-        self.assertEqual(response.status_code, 201)
-        response_msg = json.loads(response.data.decode("UTF-8"))
-        self.assertEqual("A Question has been saved", response_msg["message"])
+            self.assertEqual(response.status_code, 201)
+            response_msg = json.loads(response.data.decode("UTF-8"))
+            self.assertEqual("A Question has been saved", response_msg["message"])
 
 
     
